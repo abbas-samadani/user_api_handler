@@ -21,7 +21,7 @@ To install UserApiHandler directly from GitHub, follow these steps:
 
 3. Once the package is installed, you need to register the service provider in your `config/app.php` file:
 
-`
+```php
 
 'providers' => [
   ...
@@ -29,10 +29,10 @@ To install UserApiHandler directly from GitHub, follow these steps:
   ...
 ]
 
-`
+```
 ## Usage
 The UserService class provides methods for accessing user data. Here are some examples:
-`
+```php
 
 use UserApiHandler\UserService;
 
@@ -48,7 +48,7 @@ $users = $userService->getPaginatedUsers(1);
 // Create a new user
 $newUser = $userService->createUser('John Doe', 'Admin');
 
-`
+```
 For more usage details, refer to the source code.
 
 ## Testing
