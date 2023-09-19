@@ -9,12 +9,13 @@ use Plentific\UserApiHandler\contracts\ReqresServiceProvider;
 
 class ReqresService implements ReqresServiceProvider
 {
-    protected $baseUrl, $apiKey, $headers, $apiHost;
+    protected $baseUrl;
 
     public function __construct()
     {
         $this->baseUrl = 'https://reqres.in/api';
     }
+
 
     public function getIterableFromProvider(string $uri, string $dataIndex = ''): ?array
     {

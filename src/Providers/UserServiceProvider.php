@@ -13,4 +13,6 @@ class UserServiceProvider extends ServiceProvider
             return new UserService($app->make(ReqresService::class));
         });
     }
+
+
 }
