@@ -25,7 +25,7 @@ To install UserApiHandler directly from GitHub, follow these steps:
 
 'providers' => [
   ...
-  Plentific\UserApiHandler\ServiceProvider::class,
+  Plentific\UserApiHandler\Providers\UserServiceProvider::class,
   ...
 ]
 
@@ -34,19 +34,19 @@ To install UserApiHandler directly from GitHub, follow these steps:
 The UserService class provides methods for accessing user data. Here are some examples:
 ```php
 
-use UserApiHandler\UserService;
+use Plentific\UserApiHandler\UserController;
 
-// Create a UserService instance
-$userService = new UserService();
+// Create a UserController instance
+$UserController = new UserController();
 
 // Get a single user by ID
-$user = $userService->getUserById(1);
+$user = $UserController->show(1);
 
 // Get a paginated list of users
-$users = $userService->getPaginatedUsers(1);
+$users = $UserController->index(1);
 
 // Create a new user
-$newUser = $userService->createUser('John Doe', 'Admin');
+$newUser = $UserController->store('Ben', 'Developer');
 
 ```
 For more usage details, refer to the source code.
