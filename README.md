@@ -15,7 +15,7 @@ To install UserApiHandler directly from GitHub, follow these steps:
     "url": "https://github.com/abbas-samadani/user_api_handler"
   }
 ]
-
+```
 2. Run the following command to install the package:
 `composer require plentific/user-api-handler`
 
