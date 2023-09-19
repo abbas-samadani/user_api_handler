@@ -1,0 +1,16 @@
+{
+    "name": "plentific/user-api-handler",
+    "description": "handling user api",
+    "autoload": {
+        "psr-4": {
+            "Plentific\\UserApiHandler\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Abbas Samadani",
+            "email": "samadani.abbas@gmail.com"
+        }
+    ],
+    "require": {}
+}
