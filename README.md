@@ -36,17 +36,29 @@ The UserService class provides methods for accessing user data. Here are some ex
 
 use Plentific\UserApiHandler\UserController;
 
-// Create a UserController instance
-$UserController = new UserController();
+class PackageController extends Controller
+{
+    private $controller;
 
-// Get a single user by ID
-$user = $UserController->show(1);
+    public function __construct(UserController $controller)
+    {
+        $this->controller = $controller;
+    }
 
-// Get a paginated list of users
-$users = $UserController->index(1);
+    public function index()
+    {
 
-// Create a new user
-$newUser = $UserController->store('Ben', 'Developer');
+        // Get a single user by ID
+        $user = $this->controller->show(1);
+        
+        // Get a paginated list of users
+        $users = $this->controller->index(1);
+        
+        // Create a new user
+        $newUser = $this->controller->store('Ben', 'Developer');
+    }
+}
+
 
 ```
 For more usage details, refer to the source code.
