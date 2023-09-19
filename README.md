@@ -26,11 +26,13 @@ To install UserApiHandler directly from GitHub, follow these steps:
   ...
   Plentific\UserApiHandler\ServiceProvider::class,
   ...
-],
+]
+
 ```
 ## Usage
 The UserService class provides methods for accessing user data. Here are some examples:
 ```json
+
 use UserApiHandler\UserService;
 
 // Create a UserService instance
@@ -44,6 +46,7 @@ $users = $userService->getPaginatedUsers(1);
 
 // Create a new user
 $newUser = $userService->createUser('John Doe', 'Admin');
+
 ```
 For more usage details, refer to the source code.
 
